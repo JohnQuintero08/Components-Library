@@ -191,46 +191,6 @@ main{
   transform: skew(20deg, 0deg) scale(1.1);
 }
 
-/* NAVIGATION BAR */
-.nav-bar{
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  width: 250px; 
-  padding: 1rem;
-  box-shadow: 1px 0px 5px rgb(72, 72, 72);
-}
-
-.link-home{
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  text-decoration: none;
-  color: #1C1C1C;
-  padding: 1rem 0.5rem;
-  border-radius: 10px;
-  margin: 0.5rem,
-}
-
-.link{
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #1C1C1C;
-  padding: 1rem 0.5rem;
-  border-radius: 10px;
-  margin: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.link:hover{
-  background-color: #edebeb
-}
-
-.isActiveStyle{
-  background-color: #edebeb;
-}
-
 /* HOME PAGE */
 .container-home{
   display: flex;
@@ -244,56 +204,6 @@ main{
   margin-bottom: 1rem;
 }
 
-/* ACCORDIONS */
-.page-accordions p{
-  margin-bottom: 1rem;
-}
-.sections-accordions{
-  display: flex;
-  gap: 7rem;
-}
-.sections-accordions section h4{
-  margin: 1rem auto;
-}
-.sections-accordions section h3{
-  font-size: 1.5rem;
-}
-.section-single .container-accordion{
-  border: none;
-  border-radius: 0px;
-  background-color: #e1eaf396;
-  border-left: 4px solid rgba(145, 219, 145, 0.822);
-}
-.container-accordion{
-  border: 1px solid #1C1C1C;
-  border-radius: 5px;
-  margin-bottom: 0.3rem;
-  max-width: 500px;
-  min-width: 300px;
-}
-.accordion-header{
-  cursor: pointer;
-  padding: 0.8rem 1rem 0rem 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-.accordion-information{
-  font-size: 0.9rem;
-  overflow: hidden;
-  max-height: 0px;
-  padding: 0rem 1rem;
-  transition: max-height 500ms, padding 500ms;
-}
-.accordion-information.active{
-  padding: 0.8rem 1rem;
-  max-height: 150px;
-}
-.icon-arrow{
-  transition: rotate 500ms;
-}
-.rotate{
-  rotate: 180deg;
-}
 /* BANNER */
 .container-banners{
   display: flex;

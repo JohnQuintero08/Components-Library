@@ -2,6 +2,15 @@ import React from "react";
 import data from '../data'
 import { IoIosArrowDown } from "react-icons/io";
 import '../index.css'
+import '../styling/accordions.css'
+/* THE DATA THAT WILL BE PASSED TO THE ACCORDION  MUST HAVE THIS STRUCTURE
+    accordionsData: [
+        {
+            id: "",
+            isOpen: false,
+            header: "",
+            answer: ""
+        },*/
 
 function AccordionHeader({children, onChange, id, isOpen}){
     return(
@@ -26,7 +35,7 @@ function AccordionInformation({children, isOpen, id}){
     )
 }
 
-function ArrayOfAccordions({object, handleChange}){
+function ArrayOfAccordionText({object, handleChange}){
     const allAcordions = object.map(item => {
         return (
             <div 
@@ -37,34 +46,51 @@ function ArrayOfAccordions({object, handleChange}){
                     id={item.id}
                     onChange={handleChange}
                     isOpen={item.isOpen}
-                >{item.header}</AccordionHeader> 
+                >{item.header}
+                </AccordionHeader> 
                 <AccordionInformation
                     isOpen={item.isOpen}
-                >{item.answer}</AccordionInformation>
+                >{item.answer}
+                </AccordionInformation>
             </div>
         )
     })
     return allAcordions
 }
-
-const Accordions = ()=>{
-    const [accordions, setAccordions] = React.useState(data.accordionsData)
-    const [faq, setFaq] = React.useState(data.faqs)
-
-    function handleChangeAccordion(id){
-        setAccordions( prevItem => {
+/* TWO OR MORE ELEMENTS OF THE ACCORDION CAN REMAIN OPENED AT THE SAME TIME*/
+function AccordionMultipleSelection({data}){
+    const [elements, setElements] = React.useState(data)
+    
+    function handleChangeMultiple(id){
+        setElements( prevItem => {
             return (
                 prevItem.map(item => item.id === id ? {...item, isOpen: !item.isOpen}: item)
             )
         })
     }
-    function handleChangeFaq(id){
-        setFaq( prevItem => {
+    
+    return (
+        <ArrayOfAccordionText object={elements} handleChange={handleChangeMultiple}/>
+    )
+}
+/* ONLY ONE ELEMENT OF THE ACCORDION CAN REMAIN OPENED, THE REST WILL BE CLOSED AUTOMATICALLY */
+function AccordionSingleSelection({data}){
+    const [elements, setElements] = React.useState(data)
+    
+    function handleChangeSingle(id){
+        setElements( prevItem => {
             return (
                 prevItem.map(item => item.id === id ? {...item, isOpen: !item.isOpen}: {...item, isOpen: false})
             )
         })
     }
+    
+    return (
+        <ArrayOfAccordionText object={elements} handleChange={handleChangeSingle}/>
+    )
+}
+
+export default function Accordions(){
     
     return (
         <div className="page-element page-accordions">
@@ -75,16 +101,14 @@ const Accordions = ()=>{
                 <section className="section-multiple">
                     <h3>Multiple selection</h3>
                     <h4>Why Using Accordions</h4>
-                    <ArrayOfAccordions object={accordions} handleChange={handleChangeAccordion}/>
+                    <AccordionMultipleSelection data={data.accordionsData}/>
                 </section>
                 <section className="section-single">
                     <h3>Single selection</h3>
                     <h4>FAQs</h4>
-                    <ArrayOfAccordions object={faq} handleChange={handleChangeFaq}/>
+                    <AccordionSingleSelection data={data.faqs}/>
                 </section>
             </div>
         </div>
     )
 }
-
-export default Accordions

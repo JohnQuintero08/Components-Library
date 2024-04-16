@@ -7,6 +7,7 @@ import { GiCarousel } from "react-icons/gi";
 import { AiOutlineInsertRowBelow } from "react-icons/ai";
 import { AiOutlinePicture } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
+import '../styling/navigationBar.css'
 
 export default function NavigationBar(){
     const [isRetracted, setIsRetracted] = React.useState(false)
