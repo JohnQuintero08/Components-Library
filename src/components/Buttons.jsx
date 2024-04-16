@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styling/buttons.css'
 
 function Button({className, children}){
     return(

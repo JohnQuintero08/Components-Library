@@ -1,0 +1,25 @@
+/* HOME PAGE */
+.container-home{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2.5rem;
+  }
+  
+.container-home h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 550px) {
+    .container-home h1{
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width:740px) {
+    .container-home h1{
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+}

@@ -3,6 +3,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { IoInformation, IoWarning } from "react-icons/io5";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoInformationCircle } from "react-icons/io5";
+import '../styling/banners.css'
 
 function Banner({children, mode, header}){
     const [content, setContent] = React.useState(
