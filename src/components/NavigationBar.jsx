@@ -7,16 +7,24 @@ import { GiCarousel } from "react-icons/gi";
 import { AiOutlineInsertRowBelow } from "react-icons/ai";
 import { AiOutlinePicture } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
+import { TiThMenu } from "react-icons/ti";
 import '../styling/navigationBar.css'
 
 export default function NavigationBar(){
     const [isRetracted, setIsRetracted] = React.useState(false)
+/*     React.useEffect(()=>console.log(isRetracted),[isRetracted]) */
+    function toggleMenu(){
+        setIsRetracted(prevState => !prevState)
+    }
 
     return(
         <nav className='nav-bar'> 
-            <NavLink 
-                className={({isActive})=> 'link-home ' + (isActive ? ' link-home-transition': null)}
-                to='/'> Home</NavLink>
+            <div className='container-menu-button'>
+                <TiThMenu onClick={toggleMenu} className='button-menu'/>
+                <NavLink 
+                    className={({isActive})=> 'link-home ' + (isActive ? ' link-home-transition': null)}
+                    to='/'> Home</NavLink>
+            </div>
             <NavLink 
                 className={({isActive})=> 'link ' + (isActive ? ' isActiveStyle': null)}
                 to='accordions' ><FaAngleDoubleDown /> Accordions</NavLink>
