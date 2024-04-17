@@ -1,7 +1,8 @@
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
-
+import '../index.css'
+import '../styling/ratings.css'
 
 function StarRating(){
     const [starPosition, setStarPosition] = React.useState(-1)
@@ -10,7 +11,7 @@ function StarRating(){
         setStarPosition(index)
     }
     
-    const starFilled = {color: 'rgb(253, 253, 128)'}
+    const starFilled = {color: 'rgb(240, 240, 70)'}
 
     const arrayOfStars = new Array(5).fill(0).map((item ,index) => {
         return (<button

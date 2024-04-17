@@ -2,8 +2,10 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialPinterest } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
+import { FaInstagram } from "react-icons/fa";
+import '../index.css'
+import '../styling/footers.css'
 
 function Footer(){
     const styles ={ 
@@ -19,7 +21,7 @@ function Footer(){
                     <div className="footer-social-icons">
                         <TiSocialTwitter   className="footer-icon"/>
                         <TiSocialFacebook  className="footer-icon"/>
-                        <TiSocialPinterest className="footer-icon" />
+                        <FaInstagram       className="footer-icon" />
                         <TiSocialYoutube   className="footer-icon"/>
                     </div>
                 </div>
@@ -54,8 +56,8 @@ function Footer(){
 }
 export default function Footers(){
     return (
-        <div className='page-element'>
-            <h1>Footers</h1>
+        <div className='page-footer'>
+            <h1 className="header-footer">Footers</h1>
             <h3>Experience the finishing touch of elegance with our website's footer. Crafted with meticulous attention to detail, 
                 our footer serves as a sophisticated hub of information and connectivity. 
                 From essential links to social media integration, it seamlessly ties together every aspect of your browsing experience. </h3>

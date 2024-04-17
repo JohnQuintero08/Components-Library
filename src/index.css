@@ -22,10 +22,6 @@ body{
   color: #1C1C1C;
 }
 @media (min-width:740px) {
-  /* .container-general{
-    display: flex;
-  } */
-
   .container-general{
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -44,7 +40,6 @@ body{
 
 /* COMMON ALL PAGES */
 .page-element{
-
   padding: 2rem 2.5rem;
 }
 .page-element h1{
@@ -54,131 +49,4 @@ body{
   margin-bottom: 3rem;
 }
 
-
-/* CARROUSELS */
-
-.carousel {
-  width: 300px;
-  height: 220px;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-inner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.carousel img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.container-all-carousels{
-  margin: 2rem auto;
-}
-.button-forward,
-.button-before{
-  position: absolute;
-  border: none;
-  background-color: #28282876;
-  color: whitesmoke;
-  height: 100%;
-  z-index: 1;
-  padding: auto 0.5rem;
-}
-
-.button-forward{
-  left: 91%;
-  top: 0%;
-
-} 
-.button-before{
-  top: 0%;
-  left: 0%;
-}
-
-.carousel-automatic,
-.carousel-manipulation{
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.container-all-carousels{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* FOOTER */
-footer{
-  margin-top: 2rem;
-  background-color: #bcebe1e6;
-  padding: 1rem;
-}
-.footer-upper-place{
-  display: flex;
-  border-bottom: 3px solid #191654;
-}
-.footer-icon{
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.links-footer{
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  gap: 0.7rem;
-}
-
-.footer-social-media{
-  width: 35%;
-}
-.footer-more-options{
-  width: 30%;
-}
-.footer-policies{
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0.5rem auto;
-}
-.footer-social-media{
- display: flex;
- flex-direction: column;
- align-items: left;
- padding-bottom: 1rem;
-}
-
-.footer-social-media h1{
-  margin-bottom: 1rem;
-}
-.footer-social-icons{
-  display: flex;
-  gap: 0.5rem;
-  margin-top: auto;
-}
-
-/* RATINGS */
-
-.button-star{
-  border: none;
-  width: 3rem;
-  height: 3rem;
-  background-color: whitesmoke;
-}
-
-.star{
-  width: 100%;
-  height: 100%;
-}
-
-.button-star:hover{
-  transform: scale(1.1);
-}
 
